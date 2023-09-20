@@ -1,7 +1,9 @@
+import 'package:e_commerce/Presentation/ui/screen/otp_verification_screen.dart';
 import 'package:e_commerce/Presentation/ui/utility/color_pattern.dart';
 import 'package:e_commerce/Presentation/ui/utility/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class EmailVarification extends StatefulWidget {
   const EmailVarification({Key? key}) : super(key: key);
@@ -45,7 +47,7 @@ class _EmailVarificationState extends State<EmailVarification> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    print("I am print button");
+                    Get.to( OTPVarification());
                   },
                   child: Text("Submit"),
                 ),
