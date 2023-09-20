@@ -27,6 +27,7 @@ class CraftyBay extends StatelessWidget {
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
+          hintStyle: TextStyle(color: Palette.subText.withOpacity(0.6),),
             border: OutlineInputBorder(
               borderSide: BorderSide(color: Palette.primarySwatch),
               borderRadius: BorderRadius.circular(20),

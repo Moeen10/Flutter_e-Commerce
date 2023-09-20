@@ -1,3 +1,4 @@
+import 'package:e_commerce/Presentation/ui/screen/complete_profile_screen.dart';
 import 'package:e_commerce/Presentation/ui/utility/color_pattern.dart';
 import 'package:e_commerce/Presentation/ui/utility/image_assets.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ class ScreenController extends GetxController {
   RxBool isResendEnabled = false.obs;
 
   void startCountdown() {
+    countdown.value = 60;
     isResendEnabled.value = false;
     Timer.periodic(const Duration(seconds: 1), (timer) {
       if (countdown.value > 0) {
@@ -56,7 +58,7 @@ class OTPVarification extends StatelessWidget {
                   SizedBox(height: 12),
                   Text(
                     "Enter OTP Code",
-                    style: Theme.of(context).textTheme.headline5?.copyWith(
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                       fontSize: 25,
                       fontWeight: FontWeight.w700,
                     ),
@@ -101,7 +103,8 @@ class OTPVarification extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
-                        print("I am print button");
+                        isCountdownStarted = false;
+                        Get.to(CompleteProfile());
                       },
                       child: Text("Next"),
                     ),

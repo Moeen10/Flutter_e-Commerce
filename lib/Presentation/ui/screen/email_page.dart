@@ -17,46 +17,48 @@ class _EmailVarificationState extends State<EmailVarification> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SvgPicture.asset(ImageAssets.craftyBayLogoSVG,height: 120,),
-              SizedBox(height: 12,),
-              Text("Welcome Back", style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                fontSize: 25,
-                fontWeight:  FontWeight.w700,
-              ),),
-              SizedBox(height: 7,),
-              Text("Please Enter Your E-mail Address",style: TextStyle(color: Palette.subText),),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SvgPicture.asset(ImageAssets.craftyBayLogoSVG,height: 120,),
+                SizedBox(height: 12,),
+                Text("Welcome Back", style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  fontSize: 25,
+                  fontWeight:  FontWeight.w700,
+                ),),
+                SizedBox(height: 12,),
+                Text("Please Enter Your E-mail Address",style: TextStyle(color: Palette.subText),),
 
-              SizedBox(height: 7,),
+                SizedBox(height: 20,),
 
-              TextField(
-                decoration: InputDecoration(
-                  hintText: "Enter Your e-mail",
-                  hintStyle: TextStyle(color: Palette.subText.withOpacity(0.6),),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Enter Your e-mail",
+
+                  ),
                 ),
-              ),
 
-              SizedBox(height: 10,),
+                SizedBox(height: 15,),
 
-              SizedBox(
-                height: 40,
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Get.to( OTPVarification());
-                  },
-                  child: Text("Submit"),
+                SizedBox(
+                  height: 40,
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Get.to( OTPVarification());
+                    },
+                    child: Text("Submit"),
+                  ),
                 ),
-              ),
 
 
-              // Text("The code will expire in 120s",style: TextStyle(color: Palette.subText),),
-              // Text("Resend Code",style: TextStyle(color: Palette.subText),),
-            ],
+                // Text("The code will expire in 120s",style: TextStyle(color: Palette.subText),),
+                // Text("Resend Code",style: TextStyle(color: Palette.subText),),
+              ],
+            ),
           ),
         ),
       ),
