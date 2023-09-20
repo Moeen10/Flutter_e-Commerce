@@ -33,7 +33,7 @@ class Palette {
     },
   );
   
-
+static const Color subText = Color(0xff989898);
   
   
 } // you can

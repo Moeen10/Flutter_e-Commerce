@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
   }
   Future<void> SplashPagetoHomepage() async {
-    await Future.delayed(const Duration(seconds: 5)); // Delay for 2 seconds
+    await Future.delayed(const Duration(seconds: 2)); // Delay for 2 seconds
     Get.offAll( const HomeScreen());
     // Get.to(HomeScreen());
   }
